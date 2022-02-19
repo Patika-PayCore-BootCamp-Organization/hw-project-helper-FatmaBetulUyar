@@ -22,7 +22,6 @@ public class Transaction implements Serializable {
 
     @Enumerated(EnumType.STRING)
     private TransactionType transactionType;
-
     private String transactionDescription;
     private Boolean isSuccess;
     private Customer customer;
