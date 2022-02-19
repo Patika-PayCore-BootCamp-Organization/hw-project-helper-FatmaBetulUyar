@@ -8,13 +8,13 @@ import org.springframework.stereotype.Component;
 @Component
 public class TransactionConsumer {
 
-    @RabbitListener(queues = RabbitMQConfig.QUEUE)
-    public void consumeMessageFromQueue(String message) {
-        System.out.println("Message received & consumed from queue : " + message);
-    }
+//    @RabbitListener(queues = RabbitMQConfig.QUEUE)
+//    public void consumeMessageFromQueue(String message) {
+//        System.out.println("Message received & consumed from queue : " + message);
+//    }
 
     @RabbitListener(queues = RabbitMQConfig.QUEUE)
     public void consumeMessageFromQueue(Transaction transaction) {
-        System.out.println("Transaction message received & consumed from queue : " + transaction);
+        System.out.println(transaction);
     }
 }
